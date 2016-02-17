@@ -107,7 +107,7 @@ if __name__ == '__main__':
     print "=" * 20
 
     # SGD up to 3-grams
-    sgd = SGDTextClassifier(train_reviews, train_labels, ngram_range=(1,2,3),
+    sgd = SGDTextClassifier(train_reviews, train_labels, ngram_range=(1,3),
                             test_texts=test_reviews, test_labels=test_labels,
                             compute_features=True)
     sgd.grid_search_cv(verbose=5, n_jobs=4)
