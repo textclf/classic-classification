@@ -209,7 +209,7 @@ class SVMClassifier(TextClassifier):
         if param_grid is None:
             # Some default nice parameters
             param_grid={'C': [0.1, 0.5, 1, 2],
-                        'kernel': ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed']}
+                        'kernel': ['linear', 'poly', 'rbf', 'sigmoid']}
 
         self._grid_search(SVC(), param_grid, scoring, n_jobs, cv, verbose)
 
